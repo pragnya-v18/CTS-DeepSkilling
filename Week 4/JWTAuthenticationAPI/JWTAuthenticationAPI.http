@@ -1,0 +1,29 @@
+@JWTAuthenticationAPI_HostAddress = http://localhost:5192
+
+### Login and get JWT
+POST {{JWTAuthenticationAPI_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+###
+
+### Get protected data without token
+GET {{JWTAuthenticationAPI_HostAddress}}/api/Secure/data
+Accept: application/json
+
+###
+
+### Get admin dashboard without token
+GET {{JWTAuthenticationAPI_HostAddress}}/api/Admin/dashboard
+Accept: application/json
+
+###@JWTAuthenticationAPI_HostAddress = http://localhost:5192
+
+GET {{JWTAuthenticationAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
